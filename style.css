@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 350px 4fr;
+    grid-template-rows: 300px 1fr;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header {
+    grid-column: 2;
+}
+
+.side {
+    grid-row: 1 / span 2;
+    background-color: #1f92d4;
+    color: white;
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-rows: repeat(auto-fit, );
+    font-weight: 500;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.content {
+    background-color: #dfe7ef;
+}
+
+.side-svg{
+    height: 25px;
+    filter: invert()
+}
+
+.search-section > img {
+    height: 25px;
+}
+
+.main-logo {
+    height: 50px;
+    filter: invert();
+}
+
+.logo {
+    color: white;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+}
+
+.utilities > *, .config > *{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: left;
+    gap: 0.6rem;
+}
+
+.utilities, .config {
+    display: grid;
+    gap: 1rem;
+}
+
+.up {
+    display: grid;
+    grid-auto-flow: column;
+}
