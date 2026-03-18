@@ -9,7 +9,7 @@
 body {
     display: grid;
     grid-template-columns: 350px 4fr;
-    grid-template-rows: 300px 1fr;
+    grid-template-rows: max-content 1fr;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -31,6 +31,7 @@ li {
     font-weight: 500;
     gap: 3rem;
     padding: 2rem;
+    height: 100vh;
 }
 
 .content {
@@ -42,8 +43,10 @@ li {
     filter: invert()
 }
 
-.search-section > img {
-    height: 25px;
+.search-section > img, #ring {
+    height: 30px;
+    aspect-ratio: 1;
+    padding: 0.2rem;
 }
 
 .main-logo {
@@ -76,5 +79,86 @@ li {
 .up {
     display: grid;
     grid-auto-flow: column;
+    grid-template-columns: 1fr max-content;
+    padding: 1rem 2rem;
+    gap: 10rem;
 }
 
+.profile {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 500;
+}
+
+.search-section {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 1rem;
+    grid-template-columns: max-content 1fr;
+}
+
+.profile-pic {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    height: 50px;
+}
+
+input {
+    background-color: #dfe7ef;
+    border: none;
+    border-radius: 2rem;
+/*     width: 800px; Seguramente lo ponga*/
+    padding: 0.5rem 1rem;
+}
+
+.search-section > img:hover, #ring:hover {
+    border-radius: 2rem;
+    background-color: #dfe7ef;
+}
+
+
+#big-profile-pic {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    height: 100px;
+}
+
+.down {
+    display: grid;
+    grid-auto-flow: column;
+    padding: 0 3rem 2rem 3rem;
+    grid-template-columns: 1fr max-content;
+}
+
+.big-profile {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: max-content 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.nav > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav > li {
+    padding: 0.5rem 2rem;
+    background-color: #1f92d4;
+    border-radius: 2rem;
+    justify-self: stretch;
+    text-align: center;
+}
