@@ -166,12 +166,17 @@ input {
 .content {
     background-color: #dfe7ef;
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template: 1fr 1fr / 1fr 350px;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .projects {
     grid-row: 1 / 3;
-    padding: 2rem;
+}
+
+.projects > h3 {
+    margin-bottom: 1rem;
 }
 
 .card {
@@ -180,15 +185,90 @@ input {
     border-radius: 5px;
     background-color: white;
     display: grid;
-    height: 200px;
+    height: 225px;
+    grid-template-rows: max-content 1fr max-content;
+    gap: 0.5rem;
+    line-height: 1.5rem;
+}
+
+.card-icon {
+    justify-self: right;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+}
+
+.card-title + p {
+    color: grey;
 }
 
 .cards-holder {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 .card-title {
     font-weight: bold;
+}
+
+.announcement-content {
+    display: grid;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 5px;
+}
+
+.announcement-title {
+    font-weight: bold;
+}
+
+.announcement-title + p {
+    color: grey;
+}
+
+.announcements > h3 {
+    margin-bottom: 1rem;
+}
+
+.announcement-content > :nth-child(-n+2) {
+    border-bottom: 1px solid rgb(182, 182, 182);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.trending-profile {
+    height: 64px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    grid-row: 1 / 3;
+    margin-right: 1.5rem;
+}
+
+.trending-content {
+    background-color: white;
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.trending-content > div {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trending-content > div > :nth-child(2) {
+    font-weight: bold;
+    align-self: end;
+    padding-bottom: 4px;
+}
+.trending-content > div > :nth-child(3) {
+    color: grey;
+}
+
+p {
+    font-size: 1.2rem;
 }
