@@ -192,7 +192,7 @@ input {
     border-radius: 5px;
     background-color: white;
     display: grid;
-    height: 250px;
+    height: 225px;
     grid-template-rows: max-content 1fr max-content;
     gap: 0.5rem;
     line-height: 1.5rem;
@@ -245,7 +245,7 @@ input {
 }
 
 .trending-profile {
-    height: 64px;
+    height: 50px;
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 50%;
@@ -256,7 +256,7 @@ input {
 .trending-content {
     background-color: white;
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
     padding: 2rem;
     border-radius: 5px;
 }
@@ -274,10 +274,6 @@ input {
 }
 .trending-content > div > :nth-child(3) {
     color: grey;
-}
-
-p {
-    font-size: 1.2rem;
 }
 
 .trending > h3 {
